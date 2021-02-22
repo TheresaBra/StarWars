@@ -1,0 +1,70 @@
+body{
+    color: whitesmoke;
+    font-size: 10px;
+   
+}
+
+.sky{
+    margin: 0;
+    padding: 0; 
+    background:url("src/assets/black-star-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.sky .login p{
+    color: white;
+    max-width: 660px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.sky .login {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.sky .login h2 {
+    color: #d4af37;
+    font-family: 'Star Jedi Hollow';
+    /* font-weight: bold; */
+    font-size: 80px;
+    margin-bottom: 36px;
+}
+
+.app-container {
+    text-align: left;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+
+.button {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 767px) { 
+    .sky .login{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .sky .login h1{
+        font-size: 42px;
+    }
+}

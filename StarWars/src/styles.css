@@ -1,0 +1,13 @@
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+}
+    
+@font-face{
+    font-family:'Star Jedi Hollow';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Star Jedi'), url('src\assets\font\Starjhol.ttf') format('truetype'); 
+}

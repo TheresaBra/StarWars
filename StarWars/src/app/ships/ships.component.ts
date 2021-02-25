@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ShipService } from '../_services/ship.service';
+import { Ship } from '../ship';
 
 @Component({
   selector: 'app-ships',
@@ -7,18 +9,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./ships.component.scss']
 })
 export class ShipsComponent implements OnInit {
-  ships:object;  
+  public ships:Ship[];
   
-  constructor(private http:HttpClient) {
-    this.ships;
-   }
+  constructor(private shipService: ShipService) {   }
 
   ngOnInit() {
-    this.http.get<any[]>('https://swapi.dev/api/starships').subscribe(ships =>{
-      this.ships = ships; 
-      console.log(this.ships)
-    }); 
+  this.getShips();  
   }
-
-
+  getShips(): void {
+    this.shipService.getShips()
+    .subscribe(ships => ships = ships);
+    console.log(this.ships); 
+  }
 }
